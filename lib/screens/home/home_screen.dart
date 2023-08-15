@@ -140,7 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Row(
               children: [
                 Expanded(child: Container()),
-                Expanded(child: Image.asset("assets/images/logo.png", height: 50, width: 50,)),
+                Expanded(child: Image.asset("assets/images/logo.jpeg", height: 70, width: 70,)),
                 Expanded(
                     child: Align(
                       alignment: Alignment.centerRight,
@@ -166,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
             margin: EdgeInsets.symmetric(horizontal: 10),
             child: Text(
               authVM.loggedInUser != null ? authVM.loggedInUser!.name.toString() : "Guest",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 30,color: Colors.green, fontWeight: FontWeight.bold),
             )),
       ],
     );
