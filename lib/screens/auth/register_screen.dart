@@ -76,6 +76,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
         child: Center(
           child: SingleChildScrollView(
             child: Container(
+              //background image with low opacity
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/putali.jpeg"),
+                  opacity: 0.2,
+                  fit: BoxFit.cover,
+                ),
+              ),
+
               padding: EdgeInsets.all(20),
               child: Column(
                 children: [
@@ -91,7 +100,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     keyboardType: TextInputType.name,
                     style: const TextStyle(
                         fontFamily: 'WorkSansSemiBold',
-                        fontSize: 16.0,
+                        fontSize: 20.0,
                         color: Colors.black),
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
@@ -119,7 +128,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     keyboardType: TextInputType.phone,
                     style: const TextStyle(
                         fontFamily: 'WorkSansSemiBold',
-                        fontSize: 16.0,
+                        fontSize: 20.0,
                         color: Colors.black),
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
@@ -147,7 +156,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     keyboardType: TextInputType.text,
                     style: const TextStyle(
                         fontFamily: 'WorkSansSemiBold',
-                        fontSize: 16.0,
+                        fontSize: 20.0,
                         color: Colors.black),
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
@@ -175,7 +184,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     validator: ValidateSignup.emailValidate,
                     style: const TextStyle(
                         fontFamily: 'WorkSansSemiBold',
-                        fontSize: 16.0,
+                        fontSize: 20.0,
                         color: Colors.black),
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
@@ -203,7 +212,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     validator: (String? value)=>ValidateSignup.password(value, _confirmPasswordController),
                     style: const TextStyle(
                         fontFamily: 'WorkSansSemiBold',
-                        fontSize: 16.0,
+                        fontSize: 20.0,
                         color: Colors.black),
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
@@ -244,7 +253,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     validator: (String? value)=>ValidateSignup.password(value, _passwordController),
                     style: const TextStyle(
                         fontFamily: 'WorkSansSemiBold',
-                        fontSize: 16.0,
+                        fontSize: 20.0,
                         color: Colors.black),
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
@@ -289,11 +298,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               )
                           ),
                           padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(vertical: 20)),
+                          backgroundColor: MaterialStateProperty.all<Color>(Color(
+                              0xffc75252)),
                         ),
                         onPressed: (){
                             register();
                         }, child: Text("Sign Up", style: TextStyle(
-                        fontSize: 20
+                        fontSize: 20,fontFamily: 'sans-serif', color: Colors.white
                     ),)),
                   ),
                   SizedBox(height: 20,),
@@ -307,7 +318,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         onTap: (){
                           Navigator.of(context).pop();
                         },
-                          child: Text("Sign in", style: TextStyle(color: Colors.blue),))
+                          child: const Text("Sign in", style: TextStyle(color: Colors.blue,fontSize: 14,fontWeight: FontWeight.bold),))
                     ],
                   ),
 

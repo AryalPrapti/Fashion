@@ -47,7 +47,14 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Consumer3<CategoryViewModel, AuthViewModel, ProductViewModel>(
         builder: (context, categoryVM, authVM, productVM, child) {
-      return Container(
+      return Container(decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/images/putali.jpeg"),
+          opacity: 0.1,
+          fit: BoxFit.cover,
+        ),
+      ),
+
         child: Stack(
           children: [
             Positioned.fill(
@@ -233,7 +240,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     fit: BoxFit.cover,
                     errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
                       return Image.asset(
-                        'assets/images/logo.png',
+                        'assets/images/logo.jpeg',
                         height: 300,
                         width: double.infinity,
                         fit: BoxFit.cover,

@@ -139,7 +139,7 @@ class _CartScreenState extends State<CartScreen> {
                                         errorBuilder: (BuildContext context, Object exception,
                                             StackTrace? stackTrace) {
                                           return Image.asset(
-                                            'assets/images/logo.png',
+                                            'assets/images/logo.jpeg',
                                             width: 100,
                                             fit: BoxFit.cover,
                                           );

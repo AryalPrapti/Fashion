@@ -61,8 +61,16 @@ class _LoginScreenState extends State<LoginScreen> {
         body: Center(
           child: SingleChildScrollView(
             child: Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/putali.jpeg"),
+                  opacity: 0.2,
+                  fit: BoxFit.cover,
+                ),
+              ),
               padding: EdgeInsets.all(20),
               child: Column(
+
                 children: [
                   Image.asset(
                     "assets/images/logo.jpeg",
@@ -145,6 +153,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         style: ButtonStyle(
                           shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20), side: BorderSide(color: Colors.blue))),
                           padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(vertical: 20)),
+                          backgroundColor: MaterialStateProperty.all<Color>(Color(
+                              0xffc75252)),
                         ),
                         onPressed: () {
                           login();
@@ -168,9 +178,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           onTap: () {
                             Navigator.of(context).pushNamed("/register");
                           },
-                          child: Text(
+                          child: const Text(
                             "Sign up",
-                            style: TextStyle(color: Colors.blue),
+                            style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold,fontSize: 14),
                           ))
                     ],
                   ),

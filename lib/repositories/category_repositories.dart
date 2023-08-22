@@ -6,7 +6,7 @@ import '../models/user_model.dart';
 import '../services/firebase_service.dart';
 
 class CategoryRepository{
-  CollectionReference<CategoryModel> categoryRef = FirebaseService.db.collection("categories")
+  CollectionReference<CategoryModel> categoryRef = FirebaseService.db.collection("category")
       .withConverter<CategoryModel>(
     fromFirestore: (snapshot, _) {
       return CategoryModel.fromFirebaseSnapshot(snapshot);
@@ -43,11 +43,11 @@ class CategoryRepository{
 
   List<CategoryModel> makeCategory(){
       return [
-        CategoryModel(categoryName: "Mobile Phones and Accessories", status: "active", imageUrl: "https://reviews.com.np/uploads/article/top-10-phones-under-30k-in-nepal-2020/top-10-phones-under-30k-in-nepal-2020.jpeg"),
-        CategoryModel(categoryName: "Automobile", status: "active", imageUrl: "https://i2-prod.dailyrecord.co.uk/incoming/article25217715.ece/ALTERNATES/s615/0_Daily-Record-Road-Record.jpg"),
-        CategoryModel(categoryName: "Apparel", status: "active", imageUrl: "https://www.techprevue.com/wp-content/uploads/2016/05/online-apparel-business.jpg"),
-        CategoryModel(categoryName: "Computers and Peripherals", status: "active", imageUrl: "https://i2.wp.com/d3d2ir91ztzaym.cloudfront.net/uploads/2020/07/computer-peripherals.jpeg"),
-        CategoryModel(categoryName: "Music Instruments", status: "active", imageUrl: "https://img.texasmonthly.com/2013/04/ESSENTIALS_680X382.jpg"),
+        CategoryModel(categoryName: "amaryllis", status: "active", imageUrl: "https://florgeous.com/wp-content/uploads/2019/09/amaryllis-plant.jpg"),
+        CategoryModel(categoryName: "Aconite", status: "active", imageUrl: "https://www.flowerglossary.com/wp-content/uploads/2017/09/aconite.jpg"),
+        CategoryModel(categoryName: "Geum", status: "active", imageUrl: "https://www.flowerglossary.com/wp-content/uploads/2017/09/geum.jpg"),
+        CategoryModel(categoryName: "Rose", status: "active", imageUrl: "https://www.flowerglossary.com/wp-content/uploads/2017/09/rose.jpg"),
+        CategoryModel(categoryName: "SunFlower", status: "active", imageUrl: "https://www.flowerglossary.com/wp-content/uploads/2017/09/sunflower.jpg"),
       ];
   }
 

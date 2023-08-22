@@ -48,7 +48,7 @@ class _AccountScreenState extends State<AccountScreen> {
             height: 10,
           ),
           Image.asset(
-            "assets/images/logo.png",
+            "assets/images/logo.jpeg",
             height: 100,
             width: 100,
           ),
@@ -56,7 +56,7 @@ class _AccountScreenState extends State<AccountScreen> {
             height: 10,
           ),
           Container(
-            child: Text(_auth.loggedInUser!.email.toString()),
+            child: Text(_auth.loggedInUser!.email.toString(), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.green),),
           ),
           SizedBox(
             height: 10,

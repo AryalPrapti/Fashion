@@ -7,7 +7,7 @@ import '../models/user_model.dart';
 import '../services/firebase_service.dart';
 
 class ProductRepository {
-  CollectionReference<ProductModel> productRef = FirebaseService.db.collection("products").withConverter<ProductModel>(
+  CollectionReference<ProductModel> productRef = FirebaseService.db.collection("product").withConverter<ProductModel>(
         fromFirestore: (snapshot, _) {
           return ProductModel.fromFirebaseSnapshot(snapshot);
         },
@@ -115,4 +115,5 @@ class ProductRepository {
       rethrow;
     }
   }
+
 }
